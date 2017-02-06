@@ -1,0 +1,4761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdapHmiMainWindow</class>
+ <widget class="QMainWindow" name="AdapHmiMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1042</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ADAP HMI Interface</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="adapHMIStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1021</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="selectTypeOfSingleAdapStrategy">
+     <widget class="QPushButton" name="singleAdapControlStrategyButton_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>261</y>
+        <width>341</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0 rgba(100, 100, 100, 255), stop:1 rgba(255, 255, 255, 255));</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/SingleAdapStrategy.png</normaloff>:/adapHMIResources/images/SingleAdapStrategy.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>400</width>
+        <height>400</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="arrowRedirection">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>311</y>
+        <width>81</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="adapHMIModule.qrc">:/adapHMIResources/images/arrow.png</pixmap>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="selectAdapStratLookupTableButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>260</y>
+        <width>141</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="selectAdapStratValLabel">
+      <property name="geometry">
+       <rect>
+        <x>683</x>
+        <y>329</y>
+        <width>44</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;VAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="selectAdapStratLutLabel">
+      <property name="geometry">
+       <rect>
+        <x>635</x>
+        <y>263</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="selectAdapStratFunctionButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>260</y>
+        <width>141</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="selectAdapStratFunctionLabel">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>754</x>
+        <y>329</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#9a9a9a;&quot;&gt;OUT=FCT(IN)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapConfigSystem_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>441</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;ADAP Configuration System&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Select an adaptive control strategy to begin&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="reviewBlockDiagramPage">
+     <widget class="QToolButton" name="reviewBlockDiagramWeldingParamToolButton">
+      <property name="geometry">
+       <rect>
+        <x>96</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to select Welding Parameters&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_WeldParameters.png</normaloff>:/adapHMIResources/images/Btn_WeldParameters.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="reviewBlockDiagramSettingsToolButton">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to open Settings panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Configuration.png</normaloff>:/adapHMIResources/images/Btn_Configuration.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+      <property name="popupMode">
+       <enum>QToolButton::InstantPopup</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::NoArrow</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDigramOutputLabel">
+      <property name="geometry">
+       <rect>
+        <x>536</x>
+        <y>90</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;OUTPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reviewBlockDiagramLookupTableButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>299</x>
+        <y>250</y>
+        <width>121</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDiagramValLabel">
+      <property name="geometry">
+       <rect>
+        <x>375</x>
+        <y>290</y>
+        <width>44</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;VAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDigramLookupTableLabel">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>90</y>
+        <width>160</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LOOKUP TABLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="reviewBlockDiagramInputLutLine">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>90</y>
+        <width>20</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reviewBlockDiagramInputButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>250</y>
+        <width>121</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="reviewBlockDiagramLowerLine">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>487</y>
+        <width>1001</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(116, 116, 116);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDigramInputLabel">
+      <property name="geometry">
+       <rect>
+        <x>103</x>
+        <y>90</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;INPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDiagramGapLabel">
+      <property name="geometry">
+       <rect>
+        <x>153</x>
+        <y>293</y>
+        <width>44</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IPT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDiagramHeaderLabel">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>561</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;Adaptive Control Strategy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="reviewBlockDiagramOutputGroupbox">
+      <property name="geometry">
+       <rect>
+        <x>526</x>
+        <y>148</y>
+        <width>131</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 0); border-width: 10px;</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QPushButton" name="reviewBlockDiagramOutputVoltageButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="reviewBlockDiagramOutputCurrentButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="reviewBlockDiagramOutputTravelButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputVoltageLabel">
+       <property name="geometry">
+        <rect>
+         <x>57</x>
+         <y>22</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputVoltageValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>42</x>
+         <y>72</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputCurrentLabel">
+       <property name="geometry">
+        <rect>
+         <x>58</x>
+         <y>113</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;I&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputCurrentValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>163</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputTravelValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>253</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reviewBlockDiagramOutputTravelLabel">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>200</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Travel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDiagramLutLabel">
+      <property name="geometry">
+       <rect>
+        <x>336</x>
+        <y>250</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="reviewBlockDiagramLutOutputLine">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>90</y>
+        <width>20</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="reviewBlockDiagramBackButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Go back to change Adaptive Control Strategy&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Back.png</normaloff>:/adapHMIResources/images/Btn_Back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="reviewBlockDiagramApplyButton">
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Goto Next Screen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="arcWeldingParametersWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>30</y>
+        <width>0</width>
+        <height>0</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(103, 103, 103);</string>
+      </property>
+      <widget class="QWidget" name="arcWeldingParametersBodyWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>291</width>
+         <height>300</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(150,150, 150, 200)</string>
+       </property>
+       <widget class="QLabel" name="arcWeldingArcWeldingLabel">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>21</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;A&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;R&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;C &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;W&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;E&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;L&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;D&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;I&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;N&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;G&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingWireFeedLineEdit">
+        <property name="geometry">
+         <rect>
+          <x>171</x>
+          <y>35</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Wirefeed Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingWireFeedLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>35</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adapHMIResources/images/Ico_WFS.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingCurrentLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>171</x>
+          <y>90</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Current Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingCurrentLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>90</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adapHMIResources/images/Ico_Current.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingVoltageLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>171</x>
+          <y>145</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Voltage Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingVoltageLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>146</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adapHMIResources/images/Ico_Voltage.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingTravelSpeedLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>171</x>
+          <y>200</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Travelspeed Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingTravelSpeedLabel">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>200</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/adapHMIResources/images/Ico_TravelSpeed.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="arcWeldingAdditionalParameterPushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>118</x>
+          <y>250</y>
+          <width>55</width>
+          <height>50</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click for Additional Params&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_AdditionalParam.png</normaloff>:/adapHMIResources/images/Btn_AdditionalParam.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>55</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="arcWeldingAdditionalParameterWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>310</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(150,150, 150, 200)</string>
+       </property>
+       <widget class="QRadioButton" name="arcWeldingWeavingReqNoRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>153</x>
+          <y>30</y>
+          <width>41</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: none;
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>No</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingAmplitudeLabel">
+        <property name="geometry">
+         <rect>
+          <x>96</x>
+          <y>60</y>
+          <width>41</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img height=20 width=30 src=&quot;:/adapHMIResources/images/Ico_WvAmplitude.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingAmplitudeLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>146</x>
+          <y>60</y>
+          <width>41</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Amplitude Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(203, 203, 203);;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingFrequencyLabel">
+        <property name="geometry">
+         <rect>
+          <x>96</x>
+          <y>90</y>
+          <width>41</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: none;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::WinPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img height=20 width=30 src=&quot;:/adapHMIResources/images/Ico_WvFrequency.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="arcWeldingFrequencyLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>146</x>
+          <y>90</y>
+          <width>41</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter Frequency Value and Press Tab&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(203, 203, 203);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="arcWeldingIsWeavingRequiredLabel">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>0</y>
+          <width>291</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(150,150, 150, 200);</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;Is Weaving Required?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="arcWeldingWeavingReqYesRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>41</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(0, 0, 0);
+background-color: none;
+font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Yes</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="reviewBlockDiagramGeoLabel">
+      <property name="geometry">
+       <rect>
+        <x>113</x>
+        <y>250</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;GEO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="reviewBlockDiagramSettingsWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>495</y>
+        <width>0</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <widget class="QToolButton" name="reviewBlockDiagramSettingsDeleteToolButton">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Delete&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Delete.png</normaloff>:/adapHMIResources/images/Btn_Delete.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="reviewBlockDiagramSettingsRefreshToolButton">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Refresh&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Refresh.png</normaloff>:/adapHMIResources/images/Btn_Refresh.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="reviewBlockDiagramSettingsSaveToolButton">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Save&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_SaveToExt.png</normaloff>:/adapHMIResources/images/Btn_SaveToExt.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="reviewBlockDiagramSettingsLoadToolButton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Load&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_LoadFromExt.png</normaloff>:/adapHMIResources/images/Btn_LoadFromExt.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="reviewBlockDiagramSettingsHomeToolButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to go to Home&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Home.png</normaloff>:/adapHMIResources/images/Btn_Home.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="reviewBlockDiagramWeldingParametersWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>176</x>
+        <y>495</y>
+        <width>0</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <widget class="QToolButton" name="reviewBlockDiagramArcWeldingToolButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>13</y>
+         <width>58</width>
+         <height>58</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to enter Arc Welding Parameters&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_ArcParams.png</normaloff>:/adapHMIResources/images/Btn_ArcParams.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="reviewBlockDiagramLaserWeldingToolButton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>13</y>
+         <width>58</width>
+         <height>58</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to enter Laser Welding Parameters&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_UseVision.png</normaloff>:/adapHMIResources/images/Btn_UseVision.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <zorder>reviewBlockDiagramWeldingParamToolButton</zorder>
+     <zorder>reviewBlockDiagramSettingsToolButton</zorder>
+     <zorder>reviewBlockDigramOutputLabel</zorder>
+     <zorder>reviewBlockDiagramLookupTableButton</zorder>
+     <zorder>reviewBlockDiagramValLabel</zorder>
+     <zorder>reviewBlockDigramLookupTableLabel</zorder>
+     <zorder>reviewBlockDiagramInputLutLine</zorder>
+     <zorder>reviewBlockDiagramInputButton</zorder>
+     <zorder>reviewBlockDiagramLowerLine</zorder>
+     <zorder>reviewBlockDigramInputLabel</zorder>
+     <zorder>reviewBlockDiagramHeaderLabel</zorder>
+     <zorder>reviewBlockDiagramOutputGroupbox</zorder>
+     <zorder>reviewBlockDiagramLutLabel</zorder>
+     <zorder>reviewBlockDiagramLutOutputLine</zorder>
+     <zorder>reviewBlockDiagramBackButton</zorder>
+     <zorder>reviewBlockDiagramApplyButton</zorder>
+     <zorder>arcWeldingParametersWidget</zorder>
+     <zorder>reviewBlockDiagramGeoLabel</zorder>
+     <zorder>reviewBlockDiagramGapLabel</zorder>
+     <zorder>reviewBlockDiagramSettingsWidget</zorder>
+     <zorder>reviewBlockDiagramWeldingParametersWidget</zorder>
+    </widget>
+    <widget class="QWidget" name="adapParametersPage">
+     <widget class="QPushButton" name="adapParametersInputButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>250</y>
+        <width>121</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="Line" name="adapParametersInputLutLine">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>90</y>
+        <width>20</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="adapParametersOutputGroupbox">
+      <property name="geometry">
+       <rect>
+        <x>526</x>
+        <y>148</y>
+        <width>131</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::StrongFocus</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 0); border-width: 10px;</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QPushButton" name="adapParametersOutputVoltageButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="adapParametersOutputCurrentButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>110</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="adapParametersOutputTravelButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>200</y>
+         <width>91</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputVoltageLabel">
+       <property name="geometry">
+        <rect>
+         <x>57</x>
+         <y>22</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputVoltageValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>42</x>
+         <y>72</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputCurrentLabel">
+       <property name="geometry">
+        <rect>
+         <x>58</x>
+         <y>113</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;I&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputCurrentValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>43</x>
+         <y>163</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputTravelValueLabel">
+       <property name="geometry">
+        <rect>
+         <x>44</x>
+         <y>253</y>
+         <width>46</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Value&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="adapParametersOutputTravelLabel">
+       <property name="geometry">
+        <rect>
+         <x>35</x>
+         <y>200</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Travel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QCommandLinkButton" name="adapParametersApplyButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>930</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to goto Review Final Block Diagram</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="adapParametersBackButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Go back to change Welding Parameters settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Back.png</normaloff>:/adapHMIResources/images/Btn_Back.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="adapParametersLookupTableButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>299</x>
+        <y>250</y>
+        <width>121</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>100</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersInputLabel">
+      <property name="geometry">
+       <rect>
+        <x>103</x>
+        <y>90</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;INPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="Line" name="adapParametersLutOutputLine">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>90</y>
+        <width>20</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersLookupTableLabel">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>90</y>
+        <width>160</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LOOKUP TABLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersHeaderLabel">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>561</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;Adaptive Control Strategy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersOutputLabel">
+      <property name="geometry">
+       <rect>
+        <x>536</x>
+        <y>90</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;OUTPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersGeoLabel">
+      <property name="geometry">
+       <rect>
+        <x>113</x>
+        <y>250</y>
+        <width>51</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;GEO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersGapLabel">
+      <property name="geometry">
+       <rect>
+        <x>153</x>
+        <y>293</y>
+        <width>44</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;IPT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersLutLabel">
+      <property name="geometry">
+       <rect>
+        <x>336</x>
+        <y>250</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adapParametersValLabel">
+      <property name="geometry">
+       <rect>
+        <x>375</x>
+        <y>290</y>
+        <width>44</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;VAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="adapParametersSettingsToolButton">
+      <property name="geometry">
+       <rect>
+        <x>840</x>
+        <y>495</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Select Settings Panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Configuration.png</normaloff>:/adapHMIResources/images/Btn_Configuration.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+      <property name="popupMode">
+       <enum>QToolButton::InstantPopup</enum>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::NoArrow</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="adapParametersSettingsWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>495</y>
+        <width>0</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <widget class="QToolButton" name="adapParametersSettingsDeleteToolButton">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Click to Delete</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Delete.png</normaloff>:/adapHMIResources/images/Btn_Delete.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="adapParametersSettingsRefreshToolButton">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Click to Refresh</string>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Refresh.png</normaloff>:/adapHMIResources/images/Btn_Refresh.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="adapParametersSettingsSaveToolButton">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Click to Save to File</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_SaveToExt.png</normaloff>:/adapHMIResources/images/Btn_SaveToExt.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="adapParametersSettingsLoadToolButton">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Click to Load from File</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_LoadFromExt.png</normaloff>:/adapHMIResources/images/Btn_LoadFromExt.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>58</width>
+         <height>58</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QToolButton" name="adapParametersSettingsHomeToolButton">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>60</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Click to Goto Home</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Home.png</normaloff>:/adapHMIResources/images/Btn_Home.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QStackedWidget" name="inputOutputParameterStackedWidget">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>30</y>
+        <width>311</width>
+        <height>455</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140);</string>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="arcWeldingInputParametersPage">
+       <widget class="Line" name="arcWeldingInputParametersUpperLine">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>76</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QCommandLinkButton" name="arcWeldingInputParametersFrontButton">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>410</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Goto Output Parameters&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Front.png</normaloff>:/adapHMIResources/images/Btn_Front.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="Line" name="arcWeldingInputParametersLowerLine">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>399</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="arcWeldingInputParamtersIconWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>291</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <widget class="QToolButton" name="arcWeldingInputParametersOneVisionInputToolButton">
+         <property name="geometry">
+          <rect>
+           <x>11</x>
+           <y>3</y>
+           <width>55</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click Select Inputs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Btn_input.png</normaloff>:/adapHMIResources/images/Btn_input.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>58</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="arcWeldingInputParametersFilteringLevelToolButton">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>4</y>
+           <width>55</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Select Input Filter Level&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Btn_Filter.png</normaloff>:/adapHMIResources/images/Btn_Filter.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>58</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="arcWeldingInputParametersNoMatchToolButton">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>3</y>
+           <width>55</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to Select Input No Match Condition&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Btn_Nomatch.png</normaloff>:/adapHMIResources/images/Btn_Nomatch.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>58</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="arcWeldingInputParametersVisionInputWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>90</y>
+          <width>0</width>
+          <height>0</height>
+         </rect>
+        </property>
+        <widget class="QCheckBox" name="arcWeldingInputParametersGapCheckBox">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>100</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_Gap.png</normaloff>:/adapHMIResources/images/Ico_Gap.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="arcWeldingInputParametersMismatchCheckBox">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>190</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_Mismatch.png</normaloff>:/adapHMIResources/images/Ico_Mismatch.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="arcWeldingInputParametersAreaCheckBox">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>10</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_Area.png</normaloff>:/adapHMIResources/images/Ico_Area.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>60</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="arcWeldingInputParametersFilteringLevelWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>90</y>
+          <width>0</width>
+          <height>0</height>
+         </rect>
+        </property>
+        <widget class="QRadioButton" name="arcWeldingInputParametersNoneFilteringLevelRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>20</y>
+           <width>60</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="arcWeldingInputParametersSmallFilteringLevelRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>90</y>
+           <width>60</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="arcWeldingInputParametersMediumFilteringLevelRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>160</y>
+           <width>60</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="arcWeldingInputParametersHighFilteringLevelRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>15</x>
+           <y>230</y>
+           <width>60</width>
+           <height>60</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="arcWeldingInputParametersNoMatchBehaviourWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>90</y>
+          <width>0</width>
+          <height>0</height>
+         </rect>
+        </property>
+        <widget class="QRadioButton" name="arcWeldingInputParametersMaintainOutputBehaviourRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>10</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="arcWeldingInputParametersResetToNormalBehaviourRadioButton">
+         <property name="geometry">
+          <rect>
+           <x>4</x>
+           <y>130</y>
+           <width>80</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::RightToLeft</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>40</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="arcWeldingOutputParametersPage">
+       <widget class="QWidget" name="arcWeldingOutputParametersWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>61</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <widget class="QToolButton" name="arcWeldingOutputParametersToolButton">
+         <property name="geometry">
+          <rect>
+           <x>2</x>
+           <y>3</y>
+           <width>55</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Click to Select Outputs</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Btn_Output.png</normaloff>:/adapHMIResources/images/Btn_Output.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>58</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="Line" name="arcWeldingOutputParametersLowerLine">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>399</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QCommandLinkButton" name="arcWeldingOutputParametersBackButton">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>410</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Go Back to Input Parameters</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Back.png</normaloff>:/adapHMIResources/images/Btn_Back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="Line" name="arcWeldingOutputParametersUpperLine">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>76</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="arcWeldingOutputParametersBodyWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>96</y>
+          <width>0</width>
+          <height>0</height>
+         </rect>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgba(150,150, 150);</string>
+        </property>
+        <widget class="QWidget" name="arcWeldingOutputAdditionalParameterWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>214</y>
+           <width>0</width>
+           <height>0</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(150,150, 150)</string>
+         </property>
+         <widget class="QLabel" name="arcWeldingOutputSelectWeavingRequiredLabel">
+          <property name="geometry">
+           <rect>
+            <x>5</x>
+            <y>1</y>
+            <width>101</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(150,150, 150, 200);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;Select Weaving&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="arcWeldingOutputAmplitudeCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>37</x>
+            <y>20</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_WvAmplitude.png</normaloff>:/adapHMIResources/images/Ico_WvAmplitude.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="arcWeldingOutputFrequencyCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>164</x>
+            <y>20</y>
+            <width>61</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_WvFrequency.png</normaloff>:/adapHMIResources/images/Ico_WvFrequency.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="arcWeldingWireFeedParamterWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>38</y>
+           <width>271</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <widget class="QCheckBox" name="arcWeldingOutputWireFeedCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>3</y>
+            <width>61</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_WFS.png</normaloff>:/adapHMIResources/images/Ico_WFS.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputWireFeedFilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputWireFeedNoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="arcWeldingOutputLabelWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>4</y>
+           <width>271</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <widget class="QLabel" name="adapParametersLabelWidgetOutputLabel">
+          <property name="geometry">
+           <rect>
+            <x>3</x>
+            <y>5</y>
+            <width>81</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:13pt; font-weight:600;&quot;&gt;OUTPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="adapParametersLabelWidgetFilterLabel">
+          <property name="geometry">
+           <rect>
+            <x>89</x>
+            <y>5</y>
+            <width>81</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:13pt; font-weight:600;&quot;&gt;FILTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="adapParametersLabelWidgetNoMatchLabel">
+          <property name="geometry">
+           <rect>
+            <x>176</x>
+            <y>5</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:13pt; font-weight:600;&quot;&gt;NOMATCH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="arcWeldingCurrentParamterWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>82</y>
+           <width>271</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <widget class="QCheckBox" name="arcWeldingOutputCurrentCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>4</y>
+            <width>61</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_Current.png</normaloff>:/adapHMIResources/images/Ico_Current.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputCurrentFilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputCurrentNoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="arcWeldingVoltageParamterWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>126</y>
+           <width>271</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <widget class="QCheckBox" name="arcWeldingOutputVoltageCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>5</y>
+            <width>61</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_Voltage.png</normaloff>:/adapHMIResources/images/Ico_Voltage.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputVoltageFilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputVoltageNoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="arcWeldingTravelSpeedParamterWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>271</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <widget class="QCheckBox" name="arcWeldingOutputTravelSpeedCheckBox">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>5</y>
+            <width>61</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Ico_TravelSpeed.png</normaloff>:/adapHMIResources/images/Ico_TravelSpeed.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputTravelSpeedFilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>108</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="arcWeldingOutputTravelSpeedNoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>5</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QCommandLinkButton" name="arcWeldingOutputParametersFrontButton">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>410</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Click to goto LUT Block</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Front.png</normaloff>:/adapHMIResources/images/Btn_Front.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <zorder>arcWeldingOutputParametersWidget</zorder>
+       <zorder>arcWeldingOutputParametersLowerLine</zorder>
+       <zorder>arcWeldingOutputParametersUpperLine</zorder>
+       <zorder>arcWeldingOutputParametersBodyWidget</zorder>
+       <zorder>arcWeldingOutputParametersFrontButton</zorder>
+       <zorder>arcWeldingOutputParametersBackButton</zorder>
+      </widget>
+      <widget class="QWidget" name="arcWeldingLookUpTablePage">
+       <widget class="QCommandLinkButton" name="arcWeldingLookUpTableBackButton">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Go back to Output parameters</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Back.png</normaloff>:/adapHMIResources/images/Btn_Back.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="Line" name="arcWeldingLookUpTableUpperLine">
+        <property name="geometry">
+         <rect>
+          <x>9</x>
+          <y>76</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="Line" name="arcWeldingLookUpTableLowerLine">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>399</y>
+          <width>291</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="arcWeldingLookUpTableWidget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>61</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <widget class="QToolButton" name="arcWeldingLookUpTableToolButton">
+         <property name="geometry">
+          <rect>
+           <x>2</x>
+           <y>3</y>
+           <width>55</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>Click to Show Lut Table</string>
+         </property>
+         <property name="text">
+          <string>...</string>
+         </property>
+         <property name="icon">
+          <iconset resource="adapHMIModule.qrc">
+           <normaloff>:/adapHMIResources/images/Btn_LookUpTable.png</normaloff>:/adapHMIResources/images/Btn_LookUpTable.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>58</width>
+           <height>58</height>
+          </size>
+         </property>
+         <property name="autoRaise">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QTableView" name="arcWeldingLookUpTableView">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>0</width>
+          <height>0</height>
+         </rect>
+        </property>
+        <property name="autoScroll">
+         <bool>true</bool>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+        </property>
+        <property name="tabKeyNavigation">
+         <bool>true</bool>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <zorder>arcWeldingLookUpTableUpperLine</zorder>
+       <zorder>arcWeldingLookUpTableLowerLine</zorder>
+       <zorder>arcWeldingLookUpTableWidget</zorder>
+       <zorder>arcWeldingLookUpTableView</zorder>
+       <zorder>arcWeldingLookUpTableBackButton</zorder>
+      </widget>
+     </widget>
+     <widget class="Line" name="adapParametersLowerLine">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>487</y>
+        <width>1001</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(116, 116, 116);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <zorder>adapParametersInputButton</zorder>
+     <zorder>adapParametersInputLutLine</zorder>
+     <zorder>adapParametersOutputGroupbox</zorder>
+     <zorder>adapParametersApplyButton</zorder>
+     <zorder>adapParametersBackButton</zorder>
+     <zorder>adapParametersLookupTableButton</zorder>
+     <zorder>adapParametersInputLabel</zorder>
+     <zorder>adapParametersLutOutputLine</zorder>
+     <zorder>adapParametersLookupTableLabel</zorder>
+     <zorder>adapParametersHeaderLabel</zorder>
+     <zorder>adapParametersOutputLabel</zorder>
+     <zorder>adapParametersGeoLabel</zorder>
+     <zorder>adapParametersLutLabel</zorder>
+     <zorder>adapParametersSettingsToolButton</zorder>
+     <zorder>adapParametersSettingsWidget</zorder>
+     <zorder>inputOutputParameterStackedWidget</zorder>
+     <zorder>adapParametersLowerLine</zorder>
+     <zorder>adapParametersGapLabel</zorder>
+     <zorder>adapParametersValLabel</zorder>
+    </widget>
+    <widget class="QWidget" name="reviewBlockDiagramFinalPage">
+     <widget class="Line" name="finalPageLowerLine">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>487</y>
+        <width>1001</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(116, 116, 116);</string>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QWidget" name="finalPageInputWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>0</width>
+        <height>0</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(140, 140, 140,245);</string>
+      </property>
+      <widget class="Line" name="finalPageInputParametersLowerLine">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>389</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QWidget" name="finalPageInputParamtersIconWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>9</x>
+         <y>0</y>
+         <width>291</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <widget class="QToolButton" name="finalPageInputParametersOneVisionInputToolButton">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>3</y>
+          <width>55</width>
+          <height>55</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_input.png</normaloff>:/adapHMIResources/images/Btn_input.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>58</width>
+          <height>58</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="finalPageInputParametersFilteringLevelToolButton">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>4</y>
+          <width>55</width>
+          <height>55</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Filter.png</normaloff>:/adapHMIResources/images/Btn_Filter.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>58</width>
+          <height>58</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QToolButton" name="finalPageInputParametersNoMatchToolButton">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>3</y>
+          <width>55</width>
+          <height>55</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Nomatch.png</normaloff>:/adapHMIResources/images/Btn_Nomatch.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>58</width>
+          <height>58</height>
+         </size>
+        </property>
+        <property name="autoRaise">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="finalPageInputParametersNoMatchBehaviourWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>201</x>
+         <y>80</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <widget class="QRadioButton" name="finalPageInputParametersMaintainOutputBehaviourRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>10</y>
+          <width>80</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="finalPageInputParametersResetToNormalBehaviourRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>130</y>
+          <width>80</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="finalPageInputParametersVisionInputWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>1</x>
+         <y>80</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <widget class="QCheckBox" name="finalPageInputParametersAreaCheckBox">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>10</y>
+          <width>80</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_Area.png</normaloff>:/adapHMIResources/images/Ico_Area.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="finalPageInputParametersGapCheckBox">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>100</y>
+          <width>80</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_Gap.png</normaloff>:/adapHMIResources/images/Ico_Gap.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="finalPageInputParametersMismatchCheckBox">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>190</y>
+          <width>80</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_Mismatch.png</normaloff>:/adapHMIResources/images/Ico_Mismatch.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="finalPageInputParametersFilteringLevelWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>101</x>
+         <y>80</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <widget class="QRadioButton" name="finalPageInputParametersNoneFilteringLevelRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>20</y>
+          <width>60</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="finalPageInputParametersSmallFilteringLevelRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>90</y>
+          <width>60</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="finalPageInputParametersMediumFilteringLevelRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>160</y>
+          <width>60</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="finalPageInputParametersHighFilteringLevelRadioButton">
+        <property name="geometry">
+         <rect>
+          <x>15</x>
+          <y>230</y>
+          <width>60</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>40</width>
+          <height>40</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="Line" name="finalPageInputParametersUpperLine">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>66</y>
+         <width>291</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QCommandLinkButton" name="finalPageInputParametersSaveButton">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>400</y>
+         <width>41</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="adapHMIModule.qrc">
+         <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QCommandLinkButton" name="finalPageSaveToolButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>500</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to Save after Editing</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Save.png</normaloff>:/adapHMIResources/images/Btn_Save.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="finalPageEditToolButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>500</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to Edit Individual Blocks</string>
+      </property>
+      <property name="text">
+       <string>...</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Edit.png</normaloff>:/adapHMIResources/images/Btn_Edit.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QWidget" name="finalPageEditModeWidget" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>10</y>
+        <width>991</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <widget class="QLabel" name="finalPageValLabel">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>274</y>
+         <width>44</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;VAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalPageOutputLabel">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>83</y>
+         <width>101</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;OUTPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalPageInputLabel">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>83</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;INPUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalPageLutLabel">
+       <property name="geometry">
+        <rect>
+         <x>474</x>
+         <y>232</y>
+         <width>51</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalPageHeaderLabel">
+       <property name="geometry">
+        <rect>
+         <x>187</x>
+         <y>3</y>
+         <width>561</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600; color:#000000;&quot;&gt;Adaptive Control Strategy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="finalPageLookupTableButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>436</x>
+         <y>232</y>
+         <width>121</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(140, 140, 140);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>100</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="Line" name="finalPageInputLutLine">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>83</y>
+         <width>20</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="finalPageOutputGroupbox">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>131</y>
+         <width>151</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0); border-width: 10px;</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <widget class="QFrame" name="finalPageOutputGroupFrame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>151</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <widget class="QWidget" name="finalPageOutput1Widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>0</width>
+           <height>0</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(140, 140, 140,245);</string>
+         </property>
+         <widget class="QComboBox" name="finalPageOutput1NoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>94</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="finalPageOutput1FilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput1FilterLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>46</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;FILTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput1NoMatchLabel">
+          <property name="geometry">
+           <rect>
+            <x>85</x>
+            <y>0</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;NOMATCH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QCommandLinkButton" name="finalPageOutput1SaveButton">
+          <property name="geometry">
+           <rect>
+            <x>53</x>
+            <y>59</y>
+            <width>41</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="finalPageOutput2Widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>100</y>
+           <width>0</width>
+           <height>0</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(140, 140, 140,245);</string>
+         </property>
+         <widget class="QComboBox" name="finalPageOutput2NoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>94</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="finalPageOutput2FilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput2NoMatchLabel">
+          <property name="geometry">
+           <rect>
+            <x>85</x>
+            <y>0</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;NOMATCH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput2FilterLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>46</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;FILTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QCommandLinkButton" name="finalPageOutput2SaveButton">
+          <property name="geometry">
+           <rect>
+            <x>53</x>
+            <y>59</y>
+            <width>41</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="finalPageOutput3Widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>200</y>
+           <width>0</width>
+           <height>0</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(140, 140, 140,245);</string>
+         </property>
+         <widget class="QComboBox" name="finalPageOutput3FilterComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_None.png</normaloff>:/adapHMIResources/images/Ico_None.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Low.png</normaloff>:/adapHMIResources/images/Ico_Low.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_Medium.png</normaloff>:/adapHMIResources/images/Ico_Medium.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_High.png</normaloff>:/adapHMIResources/images/Ico_High.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QComboBox" name="finalPageOutput3NoMatchComboBox">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>94</x>
+            <y>27</y>
+            <width>41</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <item>
+           <property name="text">
+            <string>--</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</normaloff>:/adapHMIResources/images/Ico_MaintainOutput.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="adapHMIModule.qrc">
+             <normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</normaloff>:/adapHMIResources/images/Ico_ResetToNormal.png</iconset>
+           </property>
+          </item>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput3NoMatchLabel">
+          <property name="geometry">
+           <rect>
+            <x>85</x>
+            <y>0</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;NOMATCH&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="finalPageOutput3FilterLabel">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>46</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;FILTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+         <widget class="QCommandLinkButton" name="finalPageOutput3SaveButton">
+          <property name="geometry">
+           <rect>
+            <x>53</x>
+            <y>59</y>
+            <width>41</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="icon">
+           <iconset resource="adapHMIModule.qrc">
+            <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>25</width>
+            <height>25</height>
+           </size>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="Line" name="finalPageLutOutputLine">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>83</y>
+         <width>20</width>
+         <height>371</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalPageLookupTableLabel">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>83</y>
+         <width>160</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;LOOKUP TABLE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="finalPageInputGroupbox">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>131</y>
+         <width>151</width>
+         <height>301</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(0, 0, 0); border-width: 10px;</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <widget class="QFrame" name="finalPageInputGroupFrame">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>151</width>
+          <height>301</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="finalPageLutBlockWidget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>110</y>
+         <width>0</width>
+         <height>0</height>
+        </rect>
+       </property>
+       <widget class="QCommandLinkButton" name="finalPageSaveLutBlockButton">
+        <property name="geometry">
+         <rect>
+          <x>751</x>
+          <y>303</y>
+          <width>41</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Click to goto LUT Block</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="adapHMIModule.qrc">
+          <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>25</width>
+          <height>25</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QTableView" name="finalPageLutView">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>780</width>
+          <height>290</height>
+         </rect>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+      </widget>
+      <zorder>finalPageOutputLabel</zorder>
+      <zorder>finalPageInputLabel</zorder>
+      <zorder>finalPageHeaderLabel</zorder>
+      <zorder>finalPageLookupTableButton</zorder>
+      <zorder>finalPageInputLutLine</zorder>
+      <zorder>finalPageOutputGroupbox</zorder>
+      <zorder>finalPageLutOutputLine</zorder>
+      <zorder>finalPageLookupTableLabel</zorder>
+      <zorder>finalPageLutLabel</zorder>
+      <zorder>finalPageValLabel</zorder>
+      <zorder>finalPageInputGroupbox</zorder>
+      <zorder>finalPageLutBlockWidget</zorder>
+     </widget>
+     <widget class="QCommandLinkButton" name="finalPageGenerateXMLButton">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>500</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to Save after Editing</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Xml.png</normaloff>:/adapHMIResources/images/Btn_Xml.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="finalPageCloseScreenButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>500</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Click to Save after Editing</string>
+      </property>
+      <property name="icon">
+       <iconset resource="adapHMIModule.qrc">
+        <normaloff>:/adapHMIResources/images/Btn_Confirm.png</normaloff>:/adapHMIResources/images/Btn_Confirm.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>58</width>
+        <height>58</height>
+       </size>
+      </property>
+     </widget>
+     <zorder>finalPageEditModeWidget</zorder>
+     <zorder>finalPageLowerLine</zorder>
+     <zorder>finalPageInputWidget</zorder>
+     <zorder>finalPageSaveToolButton</zorder>
+     <zorder>finalPageEditToolButton</zorder>
+     <zorder>finalPageGenerateXMLButton</zorder>
+     <zorder>finalPageCloseScreenButton</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="adapHMIModule.qrc"/>
+ </resources>
+ <connections/>
+</ui>
