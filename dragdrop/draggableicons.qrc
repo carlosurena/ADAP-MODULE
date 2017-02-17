@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="">
+   <file>images/icon1.png</file>
+   <file>images/icon2.png</file>
+   <file>images/areaIcon.png</file>
+   <file>images/gapIcon.png</file> 
+   <file>images/mismatchIcon.png</file>
+</qresource>
+</RCC>
